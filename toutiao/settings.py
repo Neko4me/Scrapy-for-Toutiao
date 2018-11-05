@@ -13,9 +13,11 @@ BOT_NAME = 'toutiao'
 
 SPIDER_MODULES = ['toutiao.spiders']
 NEWSPIDER_MODULE = 'toutiao.spiders'
-START_PAGE=20
-
-
+MONGO_URI='localhost'
+MONGO_DB='toutiao'
+ITEM_PIPELINES={
+    'toutiao.pipelines.MongoPipeline':300,
+}
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'toutiao (+http://www.yourdomain.com)'
 
